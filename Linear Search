@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,loc=0;
+    int arr[50]={10,70,80,60,20,90,40};
+    cin>>n;
+    int ITEM=20;
+    for(i=1;i<=n;i++){
+            if(ITEM==arr[i]){
+            loc=i;
+            break;
+            }
+    }
+ if(loc!=0){cout<<"Wanted Item is: "<<ITEM<<endl;
+    cout<<"The location of the item is: "<<loc<<endl;}
+    else{
+        cout<<"Item is not here"<<endl;
+    }
+    return 0;
+
+}
