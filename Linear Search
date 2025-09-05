@@ -1,21 +1,39 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int n,i,loc=0;
-    int arr[50]={10,70,80,60,20,90,40};
-    cin>>n;
-    int ITEM=20;
-    for(i=1;i<=n;i++){
-            if(ITEM==arr[i]){
-            loc=i;
-            break;
-            }
+int n,i;
+cin>>n;
+int arr[n];
+for(int i=0;i<n;i++){
+    cin>>arr[i];
+}
+int item;
+cout<<"Enter the wanted value:"<<endl;
+cin>>item;
+int first=0,last=n-1;
+bool found=false;
+while(first<=last){
+        int mid=(first+last)/2;
+    if(item==arr[mid]){
+        cout<<"Item found at index : "<<mid<<endl;
+        found=true;
+        break;
     }
- if(loc!=0){cout<<"Wanted Item is: "<<ITEM<<endl;
-    cout<<"The location of the item is: "<<loc<<endl;}
-    else{
-        cout<<"Item is not here"<<endl;
-    }
-    return 0;
 
+    else if(item>arr[mid]){
+        first=mid+1;
+    }
+    else{
+        last=mid-1;
+    }
+
+}
+
+if(!found){
+
+    cout<<"Item not found!!";
+}
+
+
+return 0;
 }
