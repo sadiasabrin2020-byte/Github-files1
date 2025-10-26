@@ -12,3 +12,4 @@ for(int i=0;i<n;i++){
 cout<<abs(sum)<<endl;
 return 0;
 }
+
