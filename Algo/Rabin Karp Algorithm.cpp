@@ -29,3 +29,4 @@ int main()
     rabinKarp(text, pattern);
     return 0;
 }
+
