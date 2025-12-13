@@ -67,3 +67,4 @@ int main() {
     cout << "VL = " << headerBits << " + " << totalBits
          << " + " << treeBits << " = " << VL << endl;
 }
+
